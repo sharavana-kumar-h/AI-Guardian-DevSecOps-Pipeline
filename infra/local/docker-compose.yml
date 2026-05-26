@@ -1,0 +1,40 @@
+services:
+  postgres:
+    image: postgres:16
+    container_name: devsecops-postgres
+    environment:
+      POSTGRES_DB: devsecops
+      POSTGRES_USER: devsecops_user
+      POSTGRES_PASSWORD: devsecops_password
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres-data:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U devsecops_user -d devsecops"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+  sonarqube:
+    image: sonarqube:lts-community
+    container_name: devsecops-sonarqube
+    depends_on:
+      postgres:
+        condition: service_healthy
+    environment:
+      SONAR_JDBC_URL: jdbc:postgresql://postgres:5432/devsecops
+      SONAR_JDBC_USERNAME: devsecops_user
+      SONAR_JDBC_PASSWORD: devsecops_password
+    ports:
+      - "9000:9000"
+    volumes:
+      - sonarqube-data:/opt/sonarqube/data
+      - sonarqube-logs:/opt/sonarqube/logs
+      - sonarqube-extensions:/opt/sonarqube/extensions
+
+volumes:
+  postgres-data:
+  sonarqube-data:
+  sonarqube-logs:
+  sonarqube-extensions:

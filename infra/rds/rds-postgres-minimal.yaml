@@ -1,0 +1,45 @@
+AWSTemplateFormatVersion: '2010-09-09'
+Description: Minimal RDS PostgreSQL reference template for AI DevSecOps demo. Review before production use.
+Parameters:
+  DBName:
+    Type: String
+    Default: devsecops
+  DBUsername:
+    Type: String
+    Default: devsecops_user
+  DBPassword:
+    Type: String
+    NoEcho: true
+    MinLength: 12
+Resources:
+  DemoDBSubnetGroup:
+    Type: AWS::RDS::DBSubnetGroup
+    Properties:
+      DBSubnetGroupDescription: Replace subnet IDs before use
+      SubnetIds:
+        - subnet-REPLACE_ME_A
+        - subnet-REPLACE_ME_B
+  DemoPostgres:
+    Type: AWS::RDS::DBInstance
+    Properties:
+      Engine: postgres
+      DBInstanceClass: db.t4g.micro
+      AllocatedStorage: 20
+      StorageEncrypted: true
+      PubliclyAccessible: false
+      MultiAZ: false
+      BackupRetentionPeriod: 7
+      DeletionProtection: false
+      DBName:
+        Ref: DBName
+      MasterUsername:
+        Ref: DBUsername
+      MasterUserPassword:
+        Ref: DBPassword
+      DBSubnetGroupName:
+        Ref: DemoDBSubnetGroup
+Outputs:
+  Endpoint:
+    Description: RDS endpoint address
+    Value:
+      Fn::GetAtt: [DemoPostgres, Endpoint.Address]
