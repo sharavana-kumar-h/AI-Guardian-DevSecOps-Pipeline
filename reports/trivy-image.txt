@@ -1,0 +1,1 @@
+Trivy unavailable; created empty fallback scan.

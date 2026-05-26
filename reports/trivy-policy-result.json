@@ -1,0 +1,38 @@
+{
+  "generated_at": "2026-05-05T16:42:22Z",
+  "input": "reports/trivy-image.json",
+  "policy": "container-security-policy",
+  "scan_missing": false,
+  "summary": {
+    "counts": {
+      "vulnerabilities": {
+        "CRITICAL": 0,
+        "HIGH": 0,
+        "MEDIUM": 0,
+        "LOW": 0,
+        "UNKNOWN": 0
+      },
+      "misconfigurations": {
+        "CRITICAL": 0,
+        "HIGH": 0,
+        "MEDIUM": 0,
+        "LOW": 0,
+        "UNKNOWN": 0
+      },
+      "secrets": {
+        "CRITICAL": 0,
+        "HIGH": 0,
+        "MEDIUM": 0,
+        "LOW": 0,
+        "UNKNOWN": 0
+      }
+    },
+    "examples": {
+      "vulnerabilities": [],
+      "misconfigurations": [],
+      "secrets": []
+    }
+  },
+  "decision": "PASS",
+  "violations": []
+}

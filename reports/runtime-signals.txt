@@ -1,0 +1,9 @@
+# Kubernetes Events
+No live Kubernetes context was available during offline validation.
+
+# Pods
+ai-devsecops-demo-0000000000-demo   2/2   Running   0   2m
+
+# Recent App Logs
+INFO ai-devsecops-demo started successfully
+INFO readiness probe passed

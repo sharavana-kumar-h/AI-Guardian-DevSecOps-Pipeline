@@ -1,0 +1,139 @@
+{
+  "generated_at": "2026-05-05T16:20:00.371887+00:00",
+  "direct_dependencies": [
+    {
+      "group_id": "org.springframework.boot",
+      "artifact_id": "spring-boot-starter-web",
+      "version": "managed-by-parent-or-bom",
+      "scope": "compile",
+      "direct": "true",
+      "source": "pom.xml"
+    },
+    {
+      "group_id": "org.springframework.boot",
+      "artifact_id": "spring-boot-starter-actuator",
+      "version": "managed-by-parent-or-bom",
+      "scope": "compile",
+      "direct": "true",
+      "source": "pom.xml"
+    },
+    {
+      "group_id": "org.springframework.boot",
+      "artifact_id": "spring-boot-starter-data-jpa",
+      "version": "managed-by-parent-or-bom",
+      "scope": "compile",
+      "direct": "true",
+      "source": "pom.xml"
+    },
+    {
+      "group_id": "org.springframework.boot",
+      "artifact_id": "spring-boot-starter-validation",
+      "version": "managed-by-parent-or-bom",
+      "scope": "compile",
+      "direct": "true",
+      "source": "pom.xml"
+    },
+    {
+      "group_id": "org.postgresql",
+      "artifact_id": "postgresql",
+      "version": "managed-by-parent-or-bom",
+      "scope": "runtime",
+      "direct": "true",
+      "source": "pom.xml"
+    },
+    {
+      "group_id": "com.h2database",
+      "artifact_id": "h2",
+      "version": "managed-by-parent-or-bom",
+      "scope": "runtime",
+      "direct": "true",
+      "source": "pom.xml"
+    },
+    {
+      "group_id": "org.springframework.boot",
+      "artifact_id": "spring-boot-starter-test",
+      "version": "managed-by-parent-or-bom",
+      "scope": "test",
+      "direct": "true",
+      "source": "pom.xml"
+    }
+  ],
+  "sbom_metadata": {
+    "available": true,
+    "path": "reports/bom.json",
+    "bom_format": "CycloneDX",
+    "spec_version": "1.5",
+    "serial_number": "urn:uuid:92b79159-4c86-4b01-adf7-f7bf91a16805"
+  },
+  "sbom_components": [
+    {
+      "name": "spring-boot-starter-web",
+      "group": "org.springframework.boot",
+      "version": "managed-by-parent-or-bom",
+      "type": "library",
+      "scope": "required",
+      "purl": "pkg:maven/org.springframework.boot/spring-boot-starter-web@managed-by-parent-or-bom",
+      "licenses": []
+    },
+    {
+      "name": "spring-boot-starter-actuator",
+      "group": "org.springframework.boot",
+      "version": "managed-by-parent-or-bom",
+      "type": "library",
+      "scope": "required",
+      "purl": "pkg:maven/org.springframework.boot/spring-boot-starter-actuator@managed-by-parent-or-bom",
+      "licenses": []
+    },
+    {
+      "name": "spring-boot-starter-data-jpa",
+      "group": "org.springframework.boot",
+      "version": "managed-by-parent-or-bom",
+      "type": "library",
+      "scope": "required",
+      "purl": "pkg:maven/org.springframework.boot/spring-boot-starter-data-jpa@managed-by-parent-or-bom",
+      "licenses": []
+    },
+    {
+      "name": "spring-boot-starter-validation",
+      "group": "org.springframework.boot",
+      "version": "managed-by-parent-or-bom",
+      "type": "library",
+      "scope": "required",
+      "purl": "pkg:maven/org.springframework.boot/spring-boot-starter-validation@managed-by-parent-or-bom",
+      "licenses": []
+    },
+    {
+      "name": "postgresql",
+      "group": "org.postgresql",
+      "version": "managed-by-parent-or-bom",
+      "type": "library",
+      "scope": "runtime",
+      "purl": "pkg:maven/org.postgresql/postgresql@managed-by-parent-or-bom",
+      "licenses": []
+    },
+    {
+      "name": "h2",
+      "group": "com.h2database",
+      "version": "managed-by-parent-or-bom",
+      "type": "library",
+      "scope": "runtime",
+      "purl": "pkg:maven/com.h2database/h2@managed-by-parent-or-bom",
+      "licenses": []
+    },
+    {
+      "name": "spring-boot-starter-test",
+      "group": "org.springframework.boot",
+      "version": "managed-by-parent-or-bom",
+      "type": "library",
+      "scope": "test",
+      "purl": "pkg:maven/org.springframework.boot/spring-boot-starter-test@managed-by-parent-or-bom",
+      "licenses": []
+    }
+  ],
+  "scope_counts": {
+    "compile": 4,
+    "runtime": 4,
+    "test": 2,
+    "required": 4
+  }
+}

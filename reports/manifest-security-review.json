@@ -1,0 +1,20 @@
+{
+  "score": 96,
+  "findings": [
+    {
+      "severity": "LOW",
+      "check": "secret-template",
+      "message": "Secret is committed only as a template.",
+      "file": "reports/rendered-k8s/secret.template.yaml",
+      "recommendation": "Generate real secrets from CI/CD credentials or a secrets manager."
+    },
+    {
+      "severity": "LOW",
+      "check": "load-balancer-exposure",
+      "message": "Service type is LoadBalancer.",
+      "file": "reports/rendered-k8s/service.yaml",
+      "recommendation": "For production, restrict source ranges or use an ingress/WAF pattern."
+    }
+  ],
+  "documents_reviewed": 11
+}

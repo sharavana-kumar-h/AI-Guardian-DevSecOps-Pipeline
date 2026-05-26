@@ -1,0 +1,8 @@
+{
+  "error": "<urlopen error [Errno 111] Connection refused>",
+  "generated_at": "2026-05-05T16:04:17.857117+00:00",
+  "host_url": "http://localhost:9000",
+  "issues": {},
+  "project_key": "ai-devsecops-demo",
+  "quality_gate": {}
+}

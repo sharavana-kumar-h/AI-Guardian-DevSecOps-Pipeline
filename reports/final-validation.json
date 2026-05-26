@@ -1,0 +1,599 @@
+{
+  "decision": "PASS",
+  "counts": {
+    "PASS": 90,
+    "FAIL": 0,
+    "WARN": 7,
+    "INFO": 1
+  },
+  "results": [
+    {
+      "check": "required-file",
+      "target": "README.md",
+      "status": "PASS",
+      "detail": "present"
+    },
+    {
+      "check": "required-file",
+      "target": "DAILY_LOG.md",
+      "status": "PASS",
+      "detail": "present"
+    },
+    {
+      "check": "required-file",
+      "target": "CHANGELOG.md",
+      "status": "PASS",
+      "detail": "present"
+    },
+    {
+      "check": "required-file",
+      "target": "PROJECT_PLAN_90_DAYS.md",
+      "status": "PASS",
+      "detail": "present"
+    },
+    {
+      "check": "required-file",
+      "target": "Jenkinsfile",
+      "status": "PASS",
+      "detail": "present"
+    },
+    {
+      "check": "required-file",
+      "target": "Dockerfile",
+      "status": "PASS",
+      "detail": "present"
+    },
+    {
+      "check": "required-file",
+      "target": "pom.xml",
+      "status": "PASS",
+      "detail": "present"
+    },
+    {
+      "check": "required-file",
+      "target": ".github/workflows/validate.yml",
+      "status": "PASS",
+      "detail": "present"
+    },
+    {
+      "check": "required-file",
+      "target": "scripts/run_day25_final_validation.sh",
+      "status": "PASS",
+      "detail": "present"
+    },
+    {
+      "check": "required-file",
+      "target": "docs/final-github-submission.md",
+      "status": "PASS",
+      "detail": "present"
+    },
+    {
+      "check": "json-parse",
+      "target": "/mnt/data/final_work/ai-devsecops-pipeline/config/container-security-policy.json",
+      "status": "PASS",
+      "detail": "valid JSON"
+    },
+    {
+      "check": "json-parse",
+      "target": "/mnt/data/final_work/ai-devsecops-pipeline/config/k8s-manifest-security-policy.json",
+      "status": "PASS",
+      "detail": "valid JSON"
+    },
+    {
+      "check": "json-parse",
+      "target": "/mnt/data/final_work/ai-devsecops-pipeline/config/license-policy.json",
+      "status": "PASS",
+      "detail": "valid JSON"
+    },
+    {
+      "check": "json-parse",
+      "target": "/mnt/data/final_work/ai-devsecops-pipeline/config/release-readiness-policy.json",
+      "status": "PASS",
+      "detail": "valid JSON"
+    },
+    {
+      "check": "json-parse",
+      "target": "/mnt/data/final_work/ai-devsecops-pipeline/config/runtime-threat-rules.json",
+      "status": "PASS",
+      "detail": "valid JSON"
+    },
+    {
+      "check": "json-parse",
+      "target": "/mnt/data/final_work/ai-devsecops-pipeline/config/sca-risk-policy.json",
+      "status": "PASS",
+      "detail": "valid JSON"
+    },
+    {
+      "check": "json-parse",
+      "target": "/mnt/data/final_work/ai-devsecops-pipeline/config/secure-code-review-rules.json",
+      "status": "PASS",
+      "detail": "valid JSON"
+    },
+    {
+      "check": "json-parse",
+      "target": "/mnt/data/final_work/ai-devsecops-pipeline/config/sonar-quality-gate.json",
+      "status": "PASS",
+      "detail": "valid JSON"
+    },
+    {
+      "check": "yaml-parse",
+      "target": "/mnt/data/final_work/ai-devsecops-pipeline/k8s/configmap.yaml",
+      "status": "PASS",
+      "detail": "valid YAML"
+    },
+    {
+      "check": "yaml-parse",
+      "target": "/mnt/data/final_work/ai-devsecops-pipeline/k8s/deployment.yaml",
+      "status": "PASS",
+      "detail": "valid YAML"
+    },
+    {
+      "check": "yaml-parse",
+      "target": "/mnt/data/final_work/ai-devsecops-pipeline/k8s/hpa.yaml",
+      "status": "PASS",
+      "detail": "valid YAML"
+    },
+    {
+      "check": "yaml-parse",
+      "target": "/mnt/data/final_work/ai-devsecops-pipeline/k8s/namespace.yaml",
+      "status": "PASS",
+      "detail": "valid YAML"
+    },
+    {
+      "check": "yaml-parse",
+      "target": "/mnt/data/final_work/ai-devsecops-pipeline/k8s/network-policy.yaml",
+      "status": "PASS",
+      "detail": "valid YAML"
+    },
+    {
+      "check": "yaml-parse",
+      "target": "/mnt/data/final_work/ai-devsecops-pipeline/k8s/pdb.yaml",
+      "status": "PASS",
+      "detail": "valid YAML"
+    },
+    {
+      "check": "yaml-parse",
+      "target": "/mnt/data/final_work/ai-devsecops-pipeline/k8s/rbac.yaml",
+      "status": "PASS",
+      "detail": "valid YAML"
+    },
+    {
+      "check": "yaml-parse",
+      "target": "/mnt/data/final_work/ai-devsecops-pipeline/k8s/secret.template.yaml",
+      "status": "PASS",
+      "detail": "valid YAML"
+    },
+    {
+      "check": "yaml-parse",
+      "target": "/mnt/data/final_work/ai-devsecops-pipeline/k8s/service.yaml",
+      "status": "PASS",
+      "detail": "valid YAML"
+    },
+    {
+      "check": "yaml-parse",
+      "target": "/mnt/data/final_work/ai-devsecops-pipeline/infra/eks/cluster.yaml",
+      "status": "PASS",
+      "detail": "valid YAML"
+    },
+    {
+      "check": "yaml-parse",
+      "target": "/mnt/data/final_work/ai-devsecops-pipeline/infra/kind/kind-cluster.yaml",
+      "status": "PASS",
+      "detail": "valid YAML"
+    },
+    {
+      "check": "yaml-parse",
+      "target": "/mnt/data/final_work/ai-devsecops-pipeline/infra/local/docker-compose.yml",
+      "status": "PASS",
+      "detail": "valid YAML"
+    },
+    {
+      "check": "yaml-parse",
+      "target": "/mnt/data/final_work/ai-devsecops-pipeline/infra/rds/rds-postgres-minimal.yaml",
+      "status": "PASS",
+      "detail": "valid YAML"
+    },
+    {
+      "check": "yaml-parse",
+      "target": "/mnt/data/final_work/ai-devsecops-pipeline/.github/workflows/validate.yml",
+      "status": "PASS",
+      "detail": "valid YAML"
+    },
+    {
+      "check": "python-syntax",
+      "target": "/mnt/data/final_work/ai-devsecops-pipeline/scripts/ai_container_remediation.py",
+      "status": "PASS",
+      "detail": "compiled"
+    },
+    {
+      "check": "python-syntax",
+      "target": "/mnt/data/final_work/ai-devsecops-pipeline/scripts/ai_cve_prioritizer.py",
+      "status": "PASS",
+      "detail": "compiled"
+    },
+    {
+      "check": "python-syntax",
+      "target": "/mnt/data/final_work/ai-devsecops-pipeline/scripts/ai_dependency_remediation.py",
+      "status": "PASS",
+      "detail": "compiled"
+    },
+    {
+      "check": "python-syntax",
+      "target": "/mnt/data/final_work/ai-devsecops-pipeline/scripts/ai_remediation_plan.py",
+      "status": "PASS",
+      "detail": "compiled"
+    },
+    {
+      "check": "python-syntax",
+      "target": "/mnt/data/final_work/ai-devsecops-pipeline/scripts/ai_security_report.py",
+      "status": "PASS",
+      "detail": "compiled"
+    },
+    {
+      "check": "python-syntax",
+      "target": "/mnt/data/final_work/ai-devsecops-pipeline/scripts/ai_test_case_generator.py",
+      "status": "PASS",
+      "detail": "compiled"
+    },
+    {
+      "check": "python-syntax",
+      "target": "/mnt/data/final_work/ai-devsecops-pipeline/scripts/container_risk_score.py",
+      "status": "PASS",
+      "detail": "compiled"
+    },
+    {
+      "check": "python-syntax",
+      "target": "/mnt/data/final_work/ai-devsecops-pipeline/scripts/dependency_inventory.py",
+      "status": "PASS",
+      "detail": "compiled"
+    },
+    {
+      "check": "python-syntax",
+      "target": "/mnt/data/final_work/ai-devsecops-pipeline/scripts/enforce_security_gates.py",
+      "status": "PASS",
+      "detail": "compiled"
+    },
+    {
+      "check": "python-syntax",
+      "target": "/mnt/data/final_work/ai-devsecops-pipeline/scripts/fetch_sonar_report.py",
+      "status": "PASS",
+      "detail": "compiled"
+    },
+    {
+      "check": "python-syntax",
+      "target": "/mnt/data/final_work/ai-devsecops-pipeline/scripts/final_project_validator.py",
+      "status": "PASS",
+      "detail": "compiled"
+    },
+    {
+      "check": "python-syntax",
+      "target": "/mnt/data/final_work/ai-devsecops-pipeline/scripts/image_metadata_report.py",
+      "status": "PASS",
+      "detail": "compiled"
+    },
+    {
+      "check": "python-syntax",
+      "target": "/mnt/data/final_work/ai-devsecops-pipeline/scripts/image_provenance_report.py",
+      "status": "PASS",
+      "detail": "compiled"
+    },
+    {
+      "check": "python-syntax",
+      "target": "/mnt/data/final_work/ai-devsecops-pipeline/scripts/k8s_hardening_check.py",
+      "status": "PASS",
+      "detail": "compiled"
+    },
+    {
+      "check": "python-syntax",
+      "target": "/mnt/data/final_work/ai-devsecops-pipeline/scripts/k8s_manifest_security_review.py",
+      "status": "PASS",
+      "detail": "compiled"
+    },
+    {
+      "check": "python-syntax",
+      "target": "/mnt/data/final_work/ai-devsecops-pipeline/scripts/license_policy_check.py",
+      "status": "PASS",
+      "detail": "compiled"
+    },
+    {
+      "check": "python-syntax",
+      "target": "/mnt/data/final_work/ai-devsecops-pipeline/scripts/release_readiness_check.py",
+      "status": "PASS",
+      "detail": "compiled"
+    },
+    {
+      "check": "python-syntax",
+      "target": "/mnt/data/final_work/ai-devsecops-pipeline/scripts/render_rds_secret.py",
+      "status": "PASS",
+      "detail": "compiled"
+    },
+    {
+      "check": "python-syntax",
+      "target": "/mnt/data/final_work/ai-devsecops-pipeline/scripts/runtime_threat_analyzer.py",
+      "status": "PASS",
+      "detail": "compiled"
+    },
+    {
+      "check": "python-syntax",
+      "target": "/mnt/data/final_work/ai-devsecops-pipeline/scripts/sca_risk_policy.py",
+      "status": "PASS",
+      "detail": "compiled"
+    },
+    {
+      "check": "python-syntax",
+      "target": "/mnt/data/final_work/ai-devsecops-pipeline/scripts/secure_code_review.py",
+      "status": "PASS",
+      "detail": "compiled"
+    },
+    {
+      "check": "python-syntax",
+      "target": "/mnt/data/final_work/ai-devsecops-pipeline/scripts/sonar_issue_triage.py",
+      "status": "PASS",
+      "detail": "compiled"
+    },
+    {
+      "check": "python-syntax",
+      "target": "/mnt/data/final_work/ai-devsecops-pipeline/scripts/sonar_sast_policy.py",
+      "status": "PASS",
+      "detail": "compiled"
+    },
+    {
+      "check": "python-syntax",
+      "target": "/mnt/data/final_work/ai-devsecops-pipeline/scripts/trivy_policy_enforcer.py",
+      "status": "PASS",
+      "detail": "compiled"
+    },
+    {
+      "check": "shell-syntax",
+      "target": "/mnt/data/final_work/ai-devsecops-pipeline/scripts/check_aws_eks_prereqs.sh",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "shell-syntax",
+      "target": "/mnt/data/final_work/ai-devsecops-pipeline/scripts/collect_runtime_signals.sh",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "shell-syntax",
+      "target": "/mnt/data/final_work/ai-devsecops-pipeline/scripts/create_eks_cluster.sh",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "shell-syntax",
+      "target": "/mnt/data/final_work/ai-devsecops-pipeline/scripts/docker_publish.sh",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "shell-syntax",
+      "target": "/mnt/data/final_work/ai-devsecops-pipeline/scripts/generate_image_sbom.sh",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "shell-syntax",
+      "target": "/mnt/data/final_work/ai-devsecops-pipeline/scripts/generate_sbom.sh",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "shell-syntax",
+      "target": "/mnt/data/final_work/ai-devsecops-pipeline/scripts/render_k8s_manifests.sh",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "shell-syntax",
+      "target": "/mnt/data/final_work/ai-devsecops-pipeline/scripts/run_day10_eks_deploy.sh",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "shell-syntax",
+      "target": "/mnt/data/final_work/ai-devsecops-pipeline/scripts/run_day11_sast_deep_scan.sh",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "shell-syntax",
+      "target": "/mnt/data/final_work/ai-devsecops-pipeline/scripts/run_day12_quality_policy.sh",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "shell-syntax",
+      "target": "/mnt/data/final_work/ai-devsecops-pipeline/scripts/run_day13_ai_remediation.sh",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "shell-syntax",
+      "target": "/mnt/data/final_work/ai-devsecops-pipeline/scripts/run_day14_sca_inventory.sh",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "shell-syntax",
+      "target": "/mnt/data/final_work/ai-devsecops-pipeline/scripts/run_day15_dependency_policy.sh",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "shell-syntax",
+      "target": "/mnt/data/final_work/ai-devsecops-pipeline/scripts/run_day16_ai_dependency_remediation.sh",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "shell-syntax",
+      "target": "/mnt/data/final_work/ai-devsecops-pipeline/scripts/run_day17_container_hardening.sh",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "shell-syntax",
+      "target": "/mnt/data/final_work/ai-devsecops-pipeline/scripts/run_day18_trivy_policy.sh",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "shell-syntax",
+      "target": "/mnt/data/final_work/ai-devsecops-pipeline/scripts/run_day19_image_sbom_provenance.sh",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "shell-syntax",
+      "target": "/mnt/data/final_work/ai-devsecops-pipeline/scripts/run_day20_ai_container_remediation.sh",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "shell-syntax",
+      "target": "/mnt/data/final_work/ai-devsecops-pipeline/scripts/run_day21_manifest_security_review.sh",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "shell-syntax",
+      "target": "/mnt/data/final_work/ai-devsecops-pipeline/scripts/run_day22_release_readiness.sh",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "shell-syntax",
+      "target": "/mnt/data/final_work/ai-devsecops-pipeline/scripts/run_day23_rds_integration.sh",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "shell-syntax",
+      "target": "/mnt/data/final_work/ai-devsecops-pipeline/scripts/run_day24_runtime_threat_detection.sh",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "shell-syntax",
+      "target": "/mnt/data/final_work/ai-devsecops-pipeline/scripts/run_day25_final_validation.sh",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "shell-syntax",
+      "target": "/mnt/data/final_work/ai-devsecops-pipeline/scripts/run_day3_sonar.sh",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "shell-syntax",
+      "target": "/mnt/data/final_work/ai-devsecops-pipeline/scripts/run_day4_sca_container.sh",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "shell-syntax",
+      "target": "/mnt/data/final_work/ai-devsecops-pipeline/scripts/run_day5_policy_checks.sh",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "shell-syntax",
+      "target": "/mnt/data/final_work/ai-devsecops-pipeline/scripts/run_day6_docker_publish.sh",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "shell-syntax",
+      "target": "/mnt/data/final_work/ai-devsecops-pipeline/scripts/run_day7_k8s_hardening.sh",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "shell-syntax",
+      "target": "/mnt/data/final_work/ai-devsecops-pipeline/scripts/run_day8_local_k8s.sh",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "shell-syntax",
+      "target": "/mnt/data/final_work/ai-devsecops-pipeline/scripts/run_day9_eks_prep.sh",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "shell-syntax",
+      "target": "/mnt/data/final_work/ai-devsecops-pipeline/scripts/run_local_checks.sh",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "shell-syntax",
+      "target": "/mnt/data/final_work/ai-devsecops-pipeline/scripts/secret_scan.sh",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "shell-syntax",
+      "target": "/mnt/data/final_work/ai-devsecops-pipeline/scripts/smoke_test_k8s.sh",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "shell-syntax",
+      "target": "/mnt/data/final_work/ai-devsecops-pipeline/scripts/validate_pipeline_prereqs.sh",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "external-tool",
+      "target": "java",
+      "status": "INFO",
+      "detail": "openjdk 21.0.10 2026-01-20"
+    },
+    {
+      "check": "external-tool",
+      "target": "mvn",
+      "status": "WARN",
+      "detail": "not installed in this environment"
+    },
+    {
+      "check": "external-tool",
+      "target": "docker",
+      "status": "WARN",
+      "detail": "not installed in this environment"
+    },
+    {
+      "check": "external-tool",
+      "target": "trivy",
+      "status": "WARN",
+      "detail": "not installed in this environment"
+    },
+    {
+      "check": "external-tool",
+      "target": "conftest",
+      "status": "WARN",
+      "detail": "not installed in this environment"
+    },
+    {
+      "check": "external-tool",
+      "target": "kubectl",
+      "status": "WARN",
+      "detail": "not installed in this environment"
+    },
+    {
+      "check": "external-tool",
+      "target": "aws",
+      "status": "WARN",
+      "detail": "not installed in this environment"
+    },
+    {
+      "check": "external-tool",
+      "target": "eksctl",
+      "status": "WARN",
+      "detail": "not installed in this environment"
+    }
+  ]
+}

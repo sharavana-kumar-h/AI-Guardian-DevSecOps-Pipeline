@@ -1,0 +1,22 @@
+{
+  "generated_at": "2026-05-05T16:44:06Z",
+  "task_count": 2,
+  "tasks": [
+    {
+      "title": "Runtime image installs OS packages",
+      "severity": "LOW",
+      "score": 15,
+      "evidence": "ca-certificates, curl",
+      "recommended_action": "Keep runtime packages minimal; remove package managers where possible or consider a distroless runtime.",
+      "source": "image-metadata.json"
+    },
+    {
+      "title": "Image digest not captured",
+      "severity": "INFO",
+      "score": 5,
+      "evidence": "No digest file or RepoDigest detected",
+      "recommended_action": "Capture the registry digest after push for deployment traceability.",
+      "source": "image-metadata.json"
+    }
+  ]
+}

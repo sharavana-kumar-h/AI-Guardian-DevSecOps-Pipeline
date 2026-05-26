@@ -1,0 +1,13 @@
+{
+  "finding_count": 0,
+  "findings": [],
+  "generated_at": "2026-05-05T16:04:10.856103+00:00",
+  "severity_counts": {
+    "CRITICAL": 0,
+    "HIGH": 0,
+    "INFO": 0,
+    "LOW": 0,
+    "MEDIUM": 0
+  },
+  "tool": "secure_code_review.py"
+}

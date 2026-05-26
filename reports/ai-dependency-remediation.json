@@ -1,0 +1,28 @@
+{
+  "generated_at": "2026-05-05T16:20:44.145530+00:00",
+  "inputs": {
+    "sca": "reports/sca-policy-result.json",
+    "license": "reports/license-policy-result.json",
+    "inventory": "reports/dependency-inventory.json"
+  },
+  "actions": [
+    {
+      "priority": "P2",
+      "category": "License Metadata",
+      "target": "7 component(s)",
+      "finding": "Missing license metadata",
+      "reason": "License visibility is incomplete, which weakens compliance evidence.",
+      "recommended_fix": "Generate a full CycloneDX SBOM with Maven instead of relying on fallback SBOM mode.",
+      "validation": "bash scripts/run_day14_sca_inventory.sh"
+    },
+    {
+      "priority": "P3",
+      "category": "SBOM Quality",
+      "target": "Dependency graph completeness",
+      "finding": "SBOM appears to contain direct dependencies only",
+      "reason": "A complete SBOM should include transitive dependencies for stronger vulnerability evidence.",
+      "recommended_fix": "Ensure CycloneDX Maven plugin runs successfully and includes runtime/compile scopes.",
+      "validation": "jq '.components | length' reports/bom.json"
+    }
+  ]
+}

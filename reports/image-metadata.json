@@ -1,0 +1,68 @@
+{
+  "generated_at": "2026-05-05T16:43:12Z",
+  "image": "local/test:day19",
+  "policy": "container-security-policy",
+  "dockerfile": {
+    "path": "Dockerfile",
+    "exists": true,
+    "base_images": [
+      {
+        "image": "maven:3.9.11-eclipse-temurin-21",
+        "alias": "build"
+      },
+      {
+        "image": "eclipse-temurin:21-jre-jammy",
+        "alias": null
+      }
+    ],
+    "labels": {
+      "org.opencontainers.image.title": "AI Guardian DevSecOps Demo",
+      "org.opencontainers.image.description": "Spring Boot workload for AI-augmented DevSecOps pipeline demos",
+      "org.opencontainers.image.version": "${APP_VERSION}",
+      "org.opencontainers.image.revision": "${VCS_REF}",
+      "org.opencontainers.image.created": "${BUILD_DATE}",
+      "org.opencontainers.image.source": "${IMAGE_SOURCE}",
+      "org.opencontainers.image.licenses": "MIT"
+    },
+    "user": "appuser",
+    "expose": [
+      "8080"
+    ],
+    "healthcheck": true,
+    "entrypoint": "[\"java\", \"-XX:MaxRAMPercentage=75\", \"-Djava.io.tmpdir=/tmp\", \"-jar\", \"/app/app.jar\"]",
+    "cmd": null,
+    "apt_packages": [
+      "curl",
+      "ca-certificates"
+    ],
+    "copy_from_build": true,
+    "raw_user_lines": [
+      "USER appuser"
+    ]
+  },
+  "image_inspect": {
+    "available": false,
+    "reason": "docker CLI is not installed"
+  },
+  "digest": null,
+  "findings": [
+    {
+      "severity": "LOW",
+      "id": "IMG005",
+      "title": "Runtime image installs OS packages",
+      "evidence": "ca-certificates, curl",
+      "recommendation": "Keep runtime packages minimal; remove package managers where possible or consider a distroless runtime."
+    },
+    {
+      "severity": "INFO",
+      "id": "IMG007",
+      "title": "Image digest not captured",
+      "evidence": "No digest file or RepoDigest detected",
+      "recommendation": "Capture the registry digest after push for deployment traceability."
+    }
+  ],
+  "summary": {
+    "total_findings": 2,
+    "high_or_critical": 0
+  }
+}

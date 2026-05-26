@@ -1,0 +1,91 @@
+{
+  "decision": "PASS",
+  "score": 100,
+  "required_files": [
+    {
+      "path": "README.md",
+      "status": "present"
+    },
+    {
+      "path": "DAILY_LOG.md",
+      "status": "present"
+    },
+    {
+      "path": "CHANGELOG.md",
+      "status": "present"
+    },
+    {
+      "path": "Jenkinsfile",
+      "status": "present"
+    },
+    {
+      "path": "Dockerfile",
+      "status": "present"
+    },
+    {
+      "path": "pom.xml",
+      "status": "present"
+    },
+    {
+      "path": "k8s/deployment.yaml",
+      "status": "present"
+    },
+    {
+      "path": "k8s/service.yaml",
+      "status": "present"
+    },
+    {
+      "path": "policies/kubernetes.rego",
+      "status": "present"
+    },
+    {
+      "path": "policies/dockerfile.rego",
+      "status": "present"
+    }
+  ],
+  "required_reports": [
+    {
+      "path": "reports/ai-test-plan.md",
+      "status": "present"
+    },
+    {
+      "path": "reports/k8s-hardening-report.md",
+      "status": "present"
+    },
+    {
+      "path": "reports/ai-security-report.md",
+      "status": "present"
+    },
+    {
+      "path": "reports/ai-container-remediation.md",
+      "status": "present"
+    },
+    {
+      "path": "reports/ai-dependency-remediation.md",
+      "status": "present"
+    }
+  ],
+  "recommended_reports": [
+    {
+      "path": "reports/sonar-evidence.md",
+      "status": "present"
+    },
+    {
+      "path": "reports/trivy-policy-result.md",
+      "status": "present"
+    },
+    {
+      "path": "reports/sca-policy-result.md",
+      "status": "present"
+    },
+    {
+      "path": "reports/manifest-security-review.md",
+      "status": "present"
+    },
+    {
+      "path": "reports/runtime-threat-summary.md",
+      "status": "present"
+    }
+  ],
+  "notes": []
+}

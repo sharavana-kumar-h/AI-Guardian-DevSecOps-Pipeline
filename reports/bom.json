@@ -1,0 +1,80 @@
+{
+  "bomFormat": "CycloneDX",
+  "specVersion": "1.5",
+  "serialNumber": "urn:uuid:92b79159-4c86-4b01-adf7-f7bf91a16805",
+  "version": 1,
+  "metadata": {
+    "timestamp": "2026-05-05T16:19:49.573805+00:00",
+    "tools": [
+      {
+        "vendor": "project-script",
+        "name": "fallback-sbom-generator"
+      }
+    ]
+  },
+  "components": [
+    {
+      "type": "library",
+      "group": "org.springframework.boot",
+      "name": "spring-boot-starter-web",
+      "version": "managed-by-parent-or-bom",
+      "scope": "required",
+      "purl": "pkg:maven/org.springframework.boot/spring-boot-starter-web@managed-by-parent-or-bom",
+      "licenses": []
+    },
+    {
+      "type": "library",
+      "group": "org.springframework.boot",
+      "name": "spring-boot-starter-actuator",
+      "version": "managed-by-parent-or-bom",
+      "scope": "required",
+      "purl": "pkg:maven/org.springframework.boot/spring-boot-starter-actuator@managed-by-parent-or-bom",
+      "licenses": []
+    },
+    {
+      "type": "library",
+      "group": "org.springframework.boot",
+      "name": "spring-boot-starter-data-jpa",
+      "version": "managed-by-parent-or-bom",
+      "scope": "required",
+      "purl": "pkg:maven/org.springframework.boot/spring-boot-starter-data-jpa@managed-by-parent-or-bom",
+      "licenses": []
+    },
+    {
+      "type": "library",
+      "group": "org.springframework.boot",
+      "name": "spring-boot-starter-validation",
+      "version": "managed-by-parent-or-bom",
+      "scope": "required",
+      "purl": "pkg:maven/org.springframework.boot/spring-boot-starter-validation@managed-by-parent-or-bom",
+      "licenses": []
+    },
+    {
+      "type": "library",
+      "group": "org.postgresql",
+      "name": "postgresql",
+      "version": "managed-by-parent-or-bom",
+      "scope": "runtime",
+      "purl": "pkg:maven/org.postgresql/postgresql@managed-by-parent-or-bom",
+      "licenses": []
+    },
+    {
+      "type": "library",
+      "group": "com.h2database",
+      "name": "h2",
+      "version": "managed-by-parent-or-bom",
+      "scope": "runtime",
+      "purl": "pkg:maven/com.h2database/h2@managed-by-parent-or-bom",
+      "licenses": []
+    },
+    {
+      "type": "library",
+      "group": "org.springframework.boot",
+      "name": "spring-boot-starter-test",
+      "version": "managed-by-parent-or-bom",
+      "scope": "test",
+      "purl": "pkg:maven/org.springframework.boot/spring-boot-starter-test@managed-by-parent-or-bom",
+      "licenses": []
+    }
+  ]
+}

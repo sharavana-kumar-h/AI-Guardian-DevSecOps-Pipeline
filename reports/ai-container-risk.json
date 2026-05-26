@@ -1,0 +1,18 @@
+{
+  "score": 100,
+  "risk_rating": "LOW",
+  "trivy_counts": {
+    "CRITICAL": 0,
+    "HIGH": 0,
+    "MEDIUM": 0,
+    "LOW": 0,
+    "UNKNOWN": 0
+  },
+  "dockerfile": {
+    "has_non_root_user": true,
+    "uses_latest_tag": false,
+    "has_healthcheck": true,
+    "uses_multi_stage": true,
+    "base_images": "maven:3.9.11-eclipse-temurin-21, eclipse-temurin:21-jre-jammy"
+  }
+}

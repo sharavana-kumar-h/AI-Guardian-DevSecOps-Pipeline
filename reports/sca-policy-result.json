@@ -1,0 +1,43 @@
+{
+  "generated_at": "2026-05-05T16:20:05.646206+00:00",
+  "decision": "PASS_WITH_WARNINGS",
+  "policy": {
+    "policy_name": "AI Guardian Dependency Risk Policy",
+    "description": "Day 15 policy for dependency vulnerability severity, SBOM completeness, and deploy readiness.",
+    "max_critical_vulnerabilities": 0,
+    "max_high_vulnerabilities": 0,
+    "max_medium_vulnerabilities": 20,
+    "fail_on_cvss_at_or_above": 9.0,
+    "warn_on_cvss_at_or_above": 7.0,
+    "require_sbom": true,
+    "require_dependency_check_report": false,
+    "allowed_unknown_components": 8,
+    "recommended_actions": [
+      "Upgrade direct dependencies first because they are controlled by the application team.",
+      "Prefer patched minor versions before major upgrades to reduce regression risk.",
+      "Use suppression files only for false positives with expiry dates and justification.",
+      "Regenerate the SBOM after every dependency change and archive it with the build."
+    ]
+  },
+  "dependency_check_path": null,
+  "sbom_path": "reports/bom.json",
+  "sbom_component_count": 7,
+  "counts": {
+    "CRITICAL": 0,
+    "HIGH": 0,
+    "MEDIUM": 0,
+    "LOW": 0,
+    "UNKNOWN": 0
+  },
+  "top_findings": [],
+  "failures": [],
+  "warnings": [
+    "Dependency Check report not found; policy evaluated SBOM presence only."
+  ],
+  "recommended_actions": [
+    "Upgrade direct dependencies first because they are controlled by the application team.",
+    "Prefer patched minor versions before major upgrades to reduce regression risk.",
+    "Use suppression files only for false positives with expiry dates and justification.",
+    "Regenerate the SBOM after every dependency change and archive it with the build."
+  ]
+}

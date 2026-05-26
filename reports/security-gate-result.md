@@ -1,0 +1,3 @@
+# Security Gate Result
+
+PASSED

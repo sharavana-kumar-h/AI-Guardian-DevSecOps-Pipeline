@@ -1,0 +1,72 @@
+{
+  "generated_at": "2026-05-05T16:20:10.765492+00:00",
+  "decision": "PASS_WITH_WARNINGS",
+  "sbom_path": "reports/bom.json",
+  "policy": {
+    "policy_name": "AI Guardian License Policy",
+    "description": "Day 15 policy for dependency license visibility and risky license families.",
+    "allowed_license_ids": [
+      "Apache-2.0",
+      "MIT",
+      "BSD-2-Clause",
+      "BSD-3-Clause",
+      "EPL-2.0",
+      "ISC",
+      "CDDL-1.1",
+      "PostgreSQL",
+      "H2"
+    ],
+    "deny_license_keywords": [
+      "AGPL",
+      "GPL-3",
+      "SSPL",
+      "BUSL",
+      "Commons Clause"
+    ],
+    "warn_license_keywords": [
+      "LGPL",
+      "GPL",
+      "MPL"
+    ],
+    "fail_on_denied_license": true,
+    "fail_on_unknown_license": false,
+    "max_unknown_licenses": 10
+  },
+  "evaluation": {
+    "component_count": 7,
+    "allowed_count": 0,
+    "denied": [],
+    "warned": [],
+    "unknown": [
+      {
+        "component": "org.springframework.boot:spring-boot-starter-web:managed-by-parent-or-bom",
+        "reason": "missing license metadata"
+      },
+      {
+        "component": "org.springframework.boot:spring-boot-starter-actuator:managed-by-parent-or-bom",
+        "reason": "missing license metadata"
+      },
+      {
+        "component": "org.springframework.boot:spring-boot-starter-data-jpa:managed-by-parent-or-bom",
+        "reason": "missing license metadata"
+      },
+      {
+        "component": "org.springframework.boot:spring-boot-starter-validation:managed-by-parent-or-bom",
+        "reason": "missing license metadata"
+      },
+      {
+        "component": "org.postgresql:postgresql:managed-by-parent-or-bom",
+        "reason": "missing license metadata"
+      },
+      {
+        "component": "com.h2database:h2:managed-by-parent-or-bom",
+        "reason": "missing license metadata"
+      },
+      {
+        "component": "org.springframework.boot:spring-boot-starter-test:managed-by-parent-or-bom",
+        "reason": "missing license metadata"
+      }
+    ],
+    "failures": []
+  }
+}
