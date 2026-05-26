@@ -1,0 +1,36 @@
+apiVersion: networking.k8s.io/v1
+kind: NetworkPolicy
+metadata:
+  name: ai-devsecops-demo-default
+  namespace: ai-devsecops
+spec:
+  podSelector:
+    matchLabels:
+      app: ai-devsecops-demo
+  policyTypes:
+    - Ingress
+    - Egress
+  ingress:
+    # Service type LoadBalancer traffic can originate outside the cluster.
+    # In production, narrow this with ingress controller/LB source ranges or cloud security groups.
+    - from:
+        - ipBlock:
+            cidr: 0.0.0.0/0
+      ports:
+        - protocol: TCP
+          port: 8080
+  egress:
+    # PostgreSQL/RDS
+    - ports:
+        - protocol: TCP
+          port: 5432
+    # HTTPS for external dependency/API calls if later enabled
+    - ports:
+        - protocol: TCP
+          port: 443
+    # DNS
+    - ports:
+        - protocol: TCP
+          port: 53
+        - protocol: UDP
+          port: 53
