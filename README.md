@@ -494,32 +494,3 @@ export K8S_NAMESPACE=ai-devsecops
 bash scripts/run_day24_runtime_threat_detection.sh
 ```
 
-### Day 25 — Final GitHub readiness validation
-
-```bash
-bash scripts/run_day25_final_validation.sh
-```
-
-Final evidence reports:
-
-```text
-reports/final-validation.md
-reports/release-readiness.md
-reports/manifest-security-review.md
-reports/runtime-threat-summary.md
-reports/ai-security-report.md
-```
-
-## Final GitHub Submission
-
-Recommended final push sequence:
-
-```bash
-git add .
-git commit -m "Days 21-25: Add manifest review, release readiness, RDS integration, runtime detection, and final validation"
-git branch -M main
-git remote add origin https://github.com/YOUR_USERNAME/ai-guardian-devsecops-pipeline.git
-git push -u origin main
-```
-
-See `docs/final-github-submission.md` for the final demo order and honest project positioning.
