@@ -1,0 +1,15 @@
+# Trivy config for Day 4 container security.
+# Jenkins can override these values from CLI flags.
+severity:
+  - HIGH
+  - CRITICAL
+ignore-unfixed: false
+vuln-type:
+  - os
+  - library
+scanners:
+  - vuln
+  - secret
+  - misconfig
+timeout: 10m
+exit-code: 1

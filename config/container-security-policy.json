@@ -1,0 +1,54 @@
+{
+  "policy_name": "container-security-policy",
+  "version": "1.0",
+  "description": "Local container image security policy used for Days 17-20.",
+  "fail_when_scan_missing": false,
+  "vulnerability_thresholds": {
+    "CRITICAL": 0,
+    "HIGH": 5,
+    "MEDIUM": 999,
+    "LOW": 999,
+    "UNKNOWN": 999
+  },
+  "misconfiguration_thresholds": {
+    "CRITICAL": 0,
+    "HIGH": 0,
+    "MEDIUM": 10,
+    "LOW": 999,
+    "UNKNOWN": 999
+  },
+  "secret_thresholds": {
+    "CRITICAL": 0,
+    "HIGH": 0,
+    "MEDIUM": 0,
+    "LOW": 0,
+    "UNKNOWN": 0
+  },
+  "image_metadata_requirements": {
+    "disallow_latest_tag": true,
+    "require_non_root_user": true,
+    "require_healthcheck": true,
+    "require_oci_labels": true,
+    "required_oci_labels": [
+      "org.opencontainers.image.title",
+      "org.opencontainers.image.description",
+      "org.opencontainers.image.version",
+      "org.opencontainers.image.revision",
+      "org.opencontainers.image.source",
+      "org.opencontainers.image.created"
+    ]
+  },
+  "base_image_guidance": {
+    "preferred_runtime_images": [
+      "eclipse-temurin:21-jre-jammy",
+      "eclipse-temurin:21-jre-alpine",
+      "gcr.io/distroless/java21-debian12"
+    ],
+    "avoid_runtime_images": [
+      "ubuntu:latest",
+      "debian:latest",
+      "openjdk:latest",
+      "eclipse-temurin:latest"
+    ]
+  }
+}

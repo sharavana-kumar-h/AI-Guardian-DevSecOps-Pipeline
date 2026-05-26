@@ -1,0 +1,25 @@
+{
+  "policy_name": "AI Guardian SonarQube Local Security Gate",
+  "description": "Local policy applied to SonarQube evidence before deploy. This complements SonarQube's built-in Quality Gate.",
+  "thresholds": {
+    "max_blocker_issues": 0,
+    "max_critical_issues": 0,
+    "max_major_security_issues": 0,
+    "max_open_security_hotspots": 5,
+    "min_coverage_percent": 70.0,
+    "max_duplicated_lines_density_percent": 5.0,
+    "allowed_quality_gate_statuses": ["OK"]
+  },
+  "severity_weights": {
+    "BLOCKER": 10,
+    "CRITICAL": 8,
+    "MAJOR": 5,
+    "MINOR": 2,
+    "INFO": 1
+  },
+  "deployment_decision": {
+    "fail_on_unavailable_sonar": false,
+    "fail_on_unreviewed_hotspots": false,
+    "fail_on_policy_violation": true
+  }
+}

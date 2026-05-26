@@ -1,0 +1,16 @@
+{
+  "rules": [
+    {"name": "CrashLoopBackOff detected", "severity": "HIGH", "pattern": "CrashLoopBackOff|Back-off restarting failed container"},
+    {"name": "Image pull failure", "severity": "HIGH", "pattern": "ImagePullBackOff|ErrImagePull|failed to pull image"},
+    {"name": "OOM kill detected", "severity": "HIGH", "pattern": "OOMKilled|out of memory"},
+    {"name": "Unauthorized access signal", "severity": "HIGH", "pattern": "Unauthorized|Forbidden|permission denied|RBAC"},
+    {"name": "Probe failure", "severity": "MEDIUM", "pattern": "Readiness probe failed|Liveness probe failed|Startup probe failed"},
+    {"name": "Application exception", "severity": "MEDIUM", "pattern": "Exception|ERROR|WARN"},
+    {"name": "HTTP server error", "severity": "MEDIUM", "pattern": "\\b5[0-9]{2}\\b"}
+  ],
+  "score": {
+    "HIGH": 20,
+    "MEDIUM": 8,
+    "LOW": 3
+  }
+}

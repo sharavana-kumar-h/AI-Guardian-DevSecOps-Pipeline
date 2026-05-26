@@ -1,0 +1,23 @@
+{
+  "minimum_score": 85,
+  "required_workload_controls": {
+    "runAsNonRoot": true,
+    "allowPrivilegeEscalation": false,
+    "readOnlyRootFilesystem": true,
+    "privileged": false,
+    "dropCapabilities": ["ALL"],
+    "seccompProfile": "RuntimeDefault",
+    "resources": ["requests.cpu", "requests.memory", "limits.cpu", "limits.memory"],
+    "probes": ["readinessProbe", "livenessProbe", "startupProbe"]
+  },
+  "required_cluster_controls": {
+    "networkPolicy": true,
+    "podDisruptionBudget": true,
+    "horizontalPodAutoscaler": true,
+    "rbacLeastPrivilege": true
+  },
+  "warnings": {
+    "serviceLoadBalancer": "LoadBalancer is acceptable for a demo, but production should restrict source ranges or place traffic behind a managed ingress/WAF.",
+    "secretTemplate": "The committed Secret file must remain a template only. Real secrets should come from CI credentials, External Secrets, or Sealed Secrets."
+  }
+}

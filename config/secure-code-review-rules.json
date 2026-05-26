@@ -1,0 +1,95 @@
+{
+  "rules": [
+    {
+      "id": "SEC-JAVA-001",
+      "name": "Potential hardcoded secret",
+      "severity": "CRITICAL",
+      "pattern": "(?i)(password|passwd|secret|api[_-]?key|token)\\s*[=:]\\s*[\\\"][^\\\"]{8,}[\\\"]",
+      "include_extensions": [
+        ".java",
+        ".yml",
+        ".yaml",
+        ".properties",
+        ".env",
+        ".json"
+      ],
+      "recommendation": "Move secrets to Kubernetes Secrets, Jenkins credentials, or a cloud secret manager. Never commit real credentials."
+    },
+    {
+      "id": "SEC-JAVA-002",
+      "name": "Weak random generator for security-sensitive code",
+      "severity": "HIGH",
+      "pattern": "new\\s+Random\\s*\\(",
+      "include_extensions": [
+        ".java"
+      ],
+      "recommendation": "Use java.security.SecureRandom for token, password, OTP, nonce, or security-sensitive generation."
+    },
+    {
+      "id": "SEC-JAVA-003",
+      "name": "Possible SQL string concatenation",
+      "severity": "HIGH",
+      "pattern": "(?i)(select|insert|update|delete)\\s+.*\\+",
+      "include_extensions": [
+        ".java"
+      ],
+      "recommendation": "Use prepared statements, Spring Data repositories, or parameterized queries instead of SQL string concatenation."
+    },
+    {
+      "id": "SEC-CONFIG-001",
+      "name": "Wildcard CORS origin",
+      "severity": "HIGH",
+      "pattern": "allowed-origins\\s*:\\s*[\\\"]?\\*[\\\"]?",
+      "include_extensions": [
+        ".yml",
+        ".yaml",
+        ".properties"
+      ],
+      "recommendation": "Restrict CORS origins to approved frontend domains."
+    },
+    {
+      "id": "SEC-CONFIG-002",
+      "name": "Actuator endpoints may be overexposed",
+      "severity": "MEDIUM",
+      "pattern": "management\\.endpoints\\.web\\.exposure\\.include\\s*[=:]\\s*\\*|include\\s*:\\s*\\*",
+      "include_extensions": [
+        ".yml",
+        ".yaml",
+        ".properties"
+      ],
+      "recommendation": "Expose only health and info publicly. Protect sensitive actuator endpoints with authentication and network restrictions."
+    },
+    {
+      "id": "SEC-CONFIG-003",
+      "name": "Plain HTTP endpoint in config",
+      "severity": "MEDIUM",
+      "pattern": "http://(?!localhost|127\\.0\\.0\\.1)",
+      "include_extensions": [
+        ".java",
+        ".yml",
+        ".yaml",
+        ".properties",
+        ".json"
+      ],
+      "recommendation": "Use HTTPS for external service communication."
+    }
+  ],
+  "ignored_paths": [
+    ".git",
+    "target",
+    "reports",
+    "node_modules",
+    ".idea",
+    ".vscode"
+  ],
+  "ignored_files": [
+    "config/secure-code-review-rules.json"
+  ],
+  "allowlist_evidence_patterns": [
+    "(?i)CHANGE_ME",
+    "(?i)your[-_]?token",
+    "(?i)your[-_]?password",
+    "(?i)example",
+    "(?i)placeholder"
+  ]
+}

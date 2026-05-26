@@ -1,0 +1,29 @@
+{
+  "required_files": [
+    "README.md",
+    "DAILY_LOG.md",
+    "CHANGELOG.md",
+    "Jenkinsfile",
+    "Dockerfile",
+    "pom.xml",
+    "k8s/deployment.yaml",
+    "k8s/service.yaml",
+    "policies/kubernetes.rego",
+    "policies/dockerfile.rego"
+  ],
+  "required_reports": [
+    "reports/ai-test-plan.md",
+    "reports/k8s-hardening-report.md",
+    "reports/ai-security-report.md",
+    "reports/ai-container-remediation.md",
+    "reports/ai-dependency-remediation.md"
+  ],
+  "recommended_reports": [
+    "reports/sonar-evidence.md",
+    "reports/trivy-policy-result.md",
+    "reports/sca-policy-result.md",
+    "reports/manifest-security-review.md",
+    "reports/runtime-threat-summary.md"
+  ],
+  "minimum_required_report_pass_rate": 0.75
+}

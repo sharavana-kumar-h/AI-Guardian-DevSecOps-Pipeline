@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<suppressions xmlns="https://jeremylong.github.io/DependencyCheck/dependency-suppression.1.3.xsd">
+    <!--
+      Keep this file intentionally small.
+      Add suppressions only after proving a finding is a false positive.
+      Every suppression should include: CVE/GHSA, reason, reviewer, and expiry date.
+    -->
+</suppressions>

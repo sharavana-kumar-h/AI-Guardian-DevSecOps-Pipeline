@@ -1,0 +1,30 @@
+{
+  "policy_name": "AI Guardian License Policy",
+  "description": "Day 15 policy for dependency license visibility and risky license families.",
+  "allowed_license_ids": [
+    "Apache-2.0",
+    "MIT",
+    "BSD-2-Clause",
+    "BSD-3-Clause",
+    "EPL-2.0",
+    "ISC",
+    "CDDL-1.1",
+    "PostgreSQL",
+    "H2"
+  ],
+  "deny_license_keywords": [
+    "AGPL",
+    "GPL-3",
+    "SSPL",
+    "BUSL",
+    "Commons Clause"
+  ],
+  "warn_license_keywords": [
+    "LGPL",
+    "GPL",
+    "MPL"
+  ],
+  "fail_on_denied_license": true,
+  "fail_on_unknown_license": false,
+  "max_unknown_licenses": 10
+}
